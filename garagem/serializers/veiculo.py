@@ -12,8 +12,6 @@ class VeiculoSerializer(ModelSerializer):
     imagem_attachment_key = SlugRelatedField(source="imagem", queryset=Image.objects.all(), slug_field="attachment_key", required=False, write_only=True,)
     imagem = ImageSerializer(required=False, read_only=True)
 
-
-
 class VeiculoDetailSerializer(ModelSerializer):
     class Meta:
         model = Veiculo
