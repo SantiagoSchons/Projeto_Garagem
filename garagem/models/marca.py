@@ -5,4 +5,4 @@ class Marca(models.Model):
     nascionalidade = models.CharField(max_length=50, null = True, blank = True,)
 
     def __str__(self):
-        return self.nome
+        return f"{self.nome.upper()}"
